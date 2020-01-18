@@ -13,6 +13,7 @@ import AddEducation from "../profile-forms/AddEducation";
 import Profiles from "../profiles/Profiles";
 import Profile from "../profile/Profile";
 import PrivateRoute from "../routing/PrivateRoute";
+import NotFound from "../layout/NotFound";
 
 const Routes = () => (
 	<section className="container">
@@ -42,6 +43,7 @@ const Routes = () => (
 
 			<PrivateRoute exact path="/posts" component={Posts} />
 			<PrivateRoute exact path="/posts/:id" component={Post} />
+			<Route component={NotFound} />
 		</Switch>
 	</section>
 );
